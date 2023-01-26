@@ -1,12 +1,10 @@
 package com.marshall.irvine.mybulletjournal.data.room.dao
 
-import androidx.room.Delete
-import androidx.room.Insert
-import androidx.room.Query
-import androidx.room.Update
+import androidx.room.*
 import com.marshall.irvine.mybulletjournal.data.room.entity.Note
 import kotlinx.coroutines.flow.Flow
 
+@Dao
 interface NoteDao {
     @Query("SELECT * FROM notes")
     fun getAllNotes(): Flow<List<Note>>
