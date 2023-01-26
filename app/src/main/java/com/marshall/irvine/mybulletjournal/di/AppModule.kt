@@ -26,4 +26,5 @@ class AppModule {
     fun provideTaskRepositoryImpl(database: BulletJournalDatabase): TaskRepositoryImpl {
         return TaskRepositoryImpl(database = database)
     }
+
 }
